@@ -9,6 +9,31 @@
 
         <script src="stl_viewer.min.js"></script>        
         <script>
+            var stl_viewer=new StlViewer
+            (
+                document.getElementById("stl_cont"),
+                {
+                    models:
+                    [
+                        {filename:"keystone.stl"}
+                    ]
+                }
+            );
+        </script>
+        
+    </body>
+</html>
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>Viewstl Javascript Plugin - Simple Example</title>
+    </head>
+
+    <body>
+        <div id="stl_cont" style="width:500px;height:500px;margin:0 auto;"></div>
+
+        <script src="stl_viewer.min.js"></script>        
+        <!-- <script>
             function STLViewer(model, elementID) {
                 var elem = document.getElementById(elementID)
                 var camera = new THREE.PerspectiveCamera(70, elem.clientWidth/elem.clientHeight, 1, 1000);
@@ -50,35 +75,33 @@
                 var largestDimension = Math.max(geometry.boundingBox.max.x,
                             geometry.boundingBox.max.y, 
                             geometry.boundingBox.max.z)
-camera.position.z = largestDimension * 1.5;
+                camera.position.z = largestDimension * 1.5;
+                                    
+                                var animate = function () {
+                    requestAnimationFrame(animate);
+                    controls.update();
+                    renderer.render(scene, camera);
+                };
                     
-                 var animate = function () {
-    requestAnimationFrame(animate);
-    controls.update();
-    renderer.render(scene, camera);
-};
-                    
-    animate();
-    });
-}                    
-            
-//             var stl_viewer=new StlViewer
-//             (
-//                 document.getElementById("stl_cont"),
-//                 {
-//                     models:
-//                     [
-//                         {filename:"keystone.stl"}
-//                     ]
-//                 }
-//             );
-        </script>
+                animate();
+                });
+            }                     -->
+        <!-- <script>
+            var stl_viewer=new StlViewer ( document.getElementById("stl_cont"),
+            {
+                models:
+                    [
+                        {filename:"keystone.stl"}
+                    ]
+            }
+            );
+        </script> -->
         
         
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
     window.onload = function() {
         STLViewer("hook.stl", "model")
     }
-    </script>        
-    </body>
-</html>
+    </script>         -->
+    <!-- </body>
+</html> -->
